@@ -6,11 +6,12 @@ let slider3;
 let slider3_value = 0;
 
 let positions = [];
+let btn1, btn2;
 
 function setup() {
-	createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, windowHeight);
   background(0);
-	angleMode(DEGREES);
+  angleMode(DEGREES);
   rectMode(CENTER);
   textAlign(CENTER, CENTER);    // 폰트 정렬 설정
 	
@@ -30,8 +31,24 @@ function setup() {
 		let pos = {x: random(300, width-100), y: random(100, height-100)}; // json, object
     positions.push(pos);
 	}
+	
+	// 메뉴 버튼
+	btn1 = createButton('Poster 1');
+	btn1.position(width / 2 - 150, 0);
+	btn1.mousePressed(scene1);
+
+	btn2 = createButton('Poster 2');
+	btn2.position(width / 2 - 50, 0);
+	btn2.mousePressed(scene2);
 }
-   
+
+function scene1() {
+  window.open("https://zxcvbnmaj.github.io/okkaj/");
+}
+function scene2() {
+  window.open("https://13sonk.github.io/13sonk/");
+}
+
 function draw() {
 	
 	slider1_value = slider1.value();
