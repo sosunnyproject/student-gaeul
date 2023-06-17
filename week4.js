@@ -117,6 +117,10 @@ function draw() {
 	pop();
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
 
 
 
